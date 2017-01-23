@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/address_multi/address_multi",
+    "pages/address_single/address_single"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "地址选择器"
+  },
+  "debug":true
+}

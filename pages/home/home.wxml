@@ -1,0 +1,10 @@
+<view class="title">地址选择器</view>
+<view class="title-en">Distpicker</view>
+<view class="intro">
+    <block wx:for="{{intro}}" wx:for-item="introItem" wx:for-index="introIndex" wx:key="intro">
+        <view class="intro-item">{{introItem}}</view>
+    </block>
+</view>
+<navigator class="link" hover-class="link-hover" url="../address_multi/address_multi">picker版</navigator>
+<navigator class="link" hover-class="link-hover" url="../address_single/address_single">picker-view版</navigator>
+<view class="github-link">https://github.com/yesifeng/wechat-weapp-distpicker</view>

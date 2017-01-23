@@ -1,0 +1,51 @@
+page {
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.title {
+    padding: 80rpx 0;
+    font-size: 60rpx;
+}
+
+.title-en {
+    margin-bottom: 80rpx;
+    color: #999;
+}
+
+.intro {
+    margin-bottom: 200rpx;
+    color: #ccc;
+    font-size: 24rpx;
+}
+
+.intro-item {
+    margin-bottom: 10rpx;
+}
+
+.link {
+    display: inline-block;
+    width: 240rpx;
+    height: 60rpx;
+    margin: 0 10rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 8rpx;
+    border: 1px solid #379FCC;
+    background-color: #2EA9DF;
+    color: #FFF;
+}
+
+.link-hover {
+    background-color: #379FCC;
+}
+
+.github-link {
+    position: fixed;
+    bottom: 80rpx;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 24rpx;
+    color: #ccc;
+}

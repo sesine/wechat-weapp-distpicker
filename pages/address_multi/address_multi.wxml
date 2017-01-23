@@ -1,0 +1,59 @@
+<form bindsubmit="savePersonInfo">
+    <view class="form-list">
+        <view class="form-item">
+            <view class="form-item-hd">姓名</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="name" value="{{name}}" placeholder="请输入姓名"/>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">手机号码</view>
+            <view class="form-item-bd">
+                <input type="number" placeholder-class="input-placeholder" name="tel" value="{{tel}}" placeholder="请输入手机号码" maxlength="11"/>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">所在省：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeProvince" mode="selector" range="{{provinceName}}" value="{{provinceSelIndex}}">
+                    <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">{{provinceName[provinceSelIndex] || '请选择所在省'}}</view>
+                    <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">所在市：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeCity" mode="selector" range="{{cityName}}" value="{{citySelIndex}}" disabled="{{!cityEnabled}}">
+                    <view class="input {{!cityName[citySelIndex] ? 'input-placeholder' : ''}}">{{cityName[citySelIndex] || '请选择所在市'}}</view>
+                    <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">所在区：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeDistrict" mode="selector" range="{{districtName}}" value="{{districtSelIndex}}" disabled="{{! districtEnabled}}">
+                    <view class="input {{!districtName[districtSelIndex] ? 'input-placeholder' : ''}}">{{districtName[districtSelIndex] || '请选择所在区'}}</view>
+                    <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">详细地址：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="address" value="{{address}}" placeholder="请输入详细地址" maxlength="20"/>
+            </view>
+        </view>
+    </view>
+    <view class="form-list">
+        <view class="form-item">
+            <view class="form-item-hd">设为默认：</view>
+            <view class="form-item-bd">
+                <switch type="switch" name="default" color="#2EA9DF" />
+            </view>
+        </view>
+    </view>
+    <button formType="submit" class="save-btn">保 存</button>
+</form>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

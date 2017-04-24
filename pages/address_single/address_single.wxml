@@ -13,6 +13,18 @@
             </view>
         </view>
         <view class="form-item">
+            <view class="form-item-hd">QQ号码：</view>
+            <view class="form-item-bd">
+                <input type="number" placeholder-class="input-placeholder" name="qq" value="{{qq}}" placeholder="请输入QQ号码" />
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">邮箱：</view>
+            <view class="form-item-bd">
+                <input type="number" placeholder-class="input-placeholder" name="email" value="{{email}}" placeholder="请输入邮箱" />
+            </view>
+        </view>
+        <view class="form-item">
             <view class="form-item-hd">地区：</view>
             <view class="form-item-bd" bindtap="showDistpicker">
                 <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">

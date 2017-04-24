@@ -88,6 +88,7 @@ Page({
   savePersonInfo: function(e) {
     var data = e.detail.value
     var telRule = /^1[3|4|5|7|8]\d{9}$/, nameRule = /^[\u2E80-\u9FFF]+$/
+    var emailRule = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
     if (data.name == '') {
       this.showMessage('请输入姓名')
     } else if (! nameRule.test(data.name)) {
@@ -96,6 +97,12 @@ Page({
       this.showMessage('请输入手机号码')
     } else if (! telRule.test(data.tel)) {
       this.showMessage('手机号码格式不正确')
+    } else if (data.qq == ''){
+      this.showMessage('请输入QQ号码')
+    } else if (data.email == ''){
+      this.showMessage('请输入邮箱')
+    } else if (! emailRule.test(data.email)) {
+      this.showMessage('邮箱格式不正确')
     } else if (data.province == '') {
       this.showMessage('请选择所在地区')
     } else if (data.city == '') {
